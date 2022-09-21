@@ -2,28 +2,35 @@
 
 ## Estructura básica
 
-Hay dos cuestiones clave para la estructura de la aplicación:
+Hay tres cuestiones clave para la estructura de la aplicación:
 
-1. Aplicación en flask
-2. Dependencias del modelo TTS
+1. **Aplicación en flask y función tts:**
 
-Cabe destacar que hay **dos archivos no incluidos** en el repositorio **debido a su tamaño**. Falta por subirse a un disco en la nube.
+* app.py
+* make_audio.py
 
-## Por integrar
+2. **Dependencias del modelo TTS:**
 
-Credenciales de GCP y MongoDB para generar el endpoint oficial.
+* config_vocoder.json
+* config.json
+* scale_stats_vocoder.npy
+* scale_stats.npy
 
-## En desarrollo
+3. Archivo .venv; requirements.txt
 
-Organización de archivos de audio.
-Identificadores de ID de cliente.
-Contenedor optimizado de la aplicación.
+Para instalar las dependencias, basta con correr
+ `pip install -r requirements.txt`
 
-* Reducción de dependencias
+Cabe destacar que hay **dos archivos no incluidos** en el repositorio **debido a su tamaño**. Estos dos archivos pueden encontrarse en este [google drive](app.pyhttps://drive.google.com/drive/folders/1w-4ZosaiQhPCtuuDySHqpIL2LyZooZKN). Es una descarga tardada, por lo que se recomienda su instalación directa en el directorio del proyecto.
 
-## Propuesta de issues
+## Uso del programa
 
-* Creación/integracion de endpoints
-* Dockerizacion
-* Generacion de nomenclatura para archivos/estructurar base de datos/bucket
-  * integrar las guidelines de Humberto
+En el ambiente escogido con las dependencias instaladas, correr **app.py**. Se debería visualizar en consola la carga del modelo y la aplicación en modo debug.
+
+## Issues en desarrollo
+
+* Integración de app con gcp y mongo
+* Añadir app en inglés
+* Organización de archivos de audio.
+* Identificadores de ID de cliente.
+* Contenedor optimizado de la aplicación.
